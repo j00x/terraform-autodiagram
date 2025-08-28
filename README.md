@@ -35,12 +35,41 @@ This software is still in alpha testing and **code is shared on an "AS IS" BASIS
 
 # Installation and Usage
 
-## External Dependencies for all versions
+## Automated Installation (Recommended)
+For Windows users, we provide an automated installation script that handles all prerequisites:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/j00x/terraform-autodiagram.git
+cd terraform-autodiagram
+```
+
+2. Run the installation script:
+```powershell
+powershell -ExecutionPolicy Bypass -File install.ps1
+```
+
+The script will:
+- Check your Python version (requires 3.9-3.11)
+- Install Poetry if not present
+- Install all project dependencies
+- Optionally install test dependencies
+- Verify Graphviz installation
+
+3. Activate the Poetry environment and run TerraVision:
+```bash
+poetry shell
+python terravision --help
+```
+
+## Manual Installation
+
+### External Dependencies for all versions
 * graphviz https://graphviz.org/download/
 * git https://git-scm.com/downloads
 * terraform https://developer.hashicorp.com/terraform/downloads
 
-## Quickstart
+### Quickstart
 1. Install all external dependencies as listed above
 2. Clone the repo ``git clone https://github.com/patrickchugh/terravision.git``
 3. Get the working directory (full path) by doing `cd terravision` and doing `pwd`.
